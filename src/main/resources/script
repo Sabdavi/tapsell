@@ -1,0 +1,12 @@
+CREATE KEYSPACE tapsell WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 3};
+
+CREATE TABLE adEvent(
+ id uuid  ,
+ requestId text PRIMARY KEY,
+ adId text,
+ adTitle text ,
+ advertiserCost double ,
+ appId text,
+ appTitle text ,
+ impressionTime double ,
+ clickTime double )
